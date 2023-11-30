@@ -1,8 +1,7 @@
 :root {
 
-    --background-color: rgb(210, 209, 209);
-    --header-color: rgb(41, 41, 41);
-
+    --background-color: rgb(232, 232, 232);
+    --bloc-color: rgb(41, 41, 41);
     --text-color: white;
 }
 
@@ -14,12 +13,11 @@
     --text-color: white;
 }
 
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 body {
@@ -120,7 +118,6 @@ body {
     }
 } */
 
-
 header {
     width: 60%;
     margin: 12px 0 6px 0;
@@ -132,8 +129,8 @@ header {
 
 
     border-radius: 12px;
-    background: var(--header-color);
-    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.269);
+    background: var(--bloc-color);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.269);
     color: var(--text-color);
 
     transition: 0.3s;
@@ -145,7 +142,7 @@ header {
     & p,
     input[type="text"],
     .range-container {
-        margin: 6px 0 6px 0;
+        margin: 6px 12px 6px 12px;
     }
 
     & h1 {
@@ -179,7 +176,7 @@ header {
     & .range-container {
 
         padding: 6px;
-        width: 100%;
+        width: 90%;
 
         display: flex;
         justify-content: center;
@@ -233,20 +230,84 @@ header {
 
 main {
     margin: 6px 0 12px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card * {
+    width: 100%;
 }
 
 .card {
     width: 300px;
     height: 400px;
+    margin: 18px 24px 18px 24px;
+    padding: 12px;
+
+    background: var(--bloc-color);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.474);
+    border-radius: 12px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    & .img-container {
+        height: 40%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        cursor: pointer;
+
+        & img {
+
+            transition: 0.3s;
+            max-width: 60%;
+            height: auto;
+        }
+    }
+
+    & .img-container:hover {
+
+        & img {
+            transform: scale(1.1);
+        }
+    }
+
+
+
+    & h2 {
+        height: 20%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & p {
+        height: 10%;
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+    }
 }
 
 
 
 
-
-
 /* Responsive */
-@media (max-width: 700px) {
+/* ========================================================================================= */
+@media (max-width: 850px) {
 
     * {
         border: 2px solid rgba(255, 0, 0, 0.455)

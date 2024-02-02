@@ -122,11 +122,12 @@ header {
     }
 
     & button:hover {
-        transform: scale(1.05);
+        background: rgb(185, 183, 183);
+        border: 2px solid white;
     }
 
     & button:active {
-        transform: scale(1);
+        transform: scale(0.9);
         transition: none;
     }
 
@@ -205,12 +206,7 @@ main {
 
 /* Responsive */
 /* ========================================================================================= */
-@media (max-width: 850px) {
-
-    header {
-        width: 94%;
-        margin: 12px;
-    }
+@media (max-width: 500px) {
 
     .filter-container {
         flex-direction: column;
@@ -218,5 +214,13 @@ main {
         & button {
             margin: 6px;
         }
+    }
+}
+
+@media (max-width: 850px) {
+
+    header {
+        width: 94%;
+        margin: 12px;
     }
 }
